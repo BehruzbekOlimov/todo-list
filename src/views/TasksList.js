@@ -50,10 +50,10 @@ const Task = ({data, onClick, toggle}) => {
     return (
         <li className="Task">
             <div className="d-flex align-items-center justify-content-between">
-                <div className="d-flex align-items-center">
+                <label className="d-flex align-items-center">
                     <input type="checkbox" checked={data.status} onClick={() => onClick('CHANGE_STATUS', data)}/>
                     <p className={data.status ? 'checked-text name':'name'}> {data.name}</p>
-                </div>
+                </label>
                 <div className="d-flex align-items-center">
                     <button className="btn btn-warning" onClick={() => toggle(data)}>Edit</button>
                     <button className="btn btn-danger ml-2" onClick={() => onClick('DELETE', data.id)}>Delete</button>
